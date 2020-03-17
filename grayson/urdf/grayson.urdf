@@ -1,0 +1,72 @@
+<robot name="grayson">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.136 0.09 0.054"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.044"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+<link name="lwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.007" radius="0.03"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  <joint name="base_to_lwheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="lwheel"/>
+    <origin xyz="0.036 0.045 0.03" rpy="1.5708 0 0"/>
+  </joint>
+  
+  <link name="rwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.007" radius="0.03"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  <joint name="base_to_rwheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="rwheel"/>
+    <origin xyz="0.036 -0.045 0.03" rpy="-1.5708 0 0"/>
+  </joint>
+ 
+
+   <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="0.021 0.044 0.026"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  <joint name="base_to_camera" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera"/>
+    <origin xyz="0.06 0 0.088" rpy="0 0 0"/>
+   </joint>
+
+	
+
+</robot>

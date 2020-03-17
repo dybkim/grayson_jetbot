@@ -1,0 +1,12 @@
+<launch>
+	<node pkg="grayson_sensors" type="wheel_encoder.py" name="wheel_encoder_right">
+		<param name="channel" value="GPIO_PZ0"/>
+		<param name="period" value="0.25"/>
+	</node>
+
+	<node pkg="grayson_sensors" type="wheel_encoder.py" name="wheel_encoder_left">
+		<param name="channel" value="LCD_BL_PW"/>
+		<param name="period" value="0.25"/>
+	</node>
+
+</launch>
